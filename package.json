@@ -1,0 +1,31 @@
+{
+  "name": "siftit",
+  "version": "1.0.0",
+  "description": "Web app that analyzes financial data to deliver realtime sales alerts with a social media twist.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattyfew/siftit.git"
+  },
+  "keywords": [
+    "MEAN"
+  ],
+  "author": "Matt Fewer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattyfew/siftit/issues"
+  },
+  "homepage": "https://github.com/mattyfew/siftit#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.3.3",
+    "morgan": "^1.6.1"
+  }
+}
