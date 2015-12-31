@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var bcrypt = require('bcrypt-nodejs');
+var userService = require('../../services/user-service');
 
 var UserSchema = new Schema({
 	firstName: {type: String, required: 'Please enter your first name'},
@@ -48,5 +48,9 @@ UserSchema.methods.comparePassword = function(password) {
 };
 
 // return the model
-module.exports = mongoose('User', UserSchema);
+var User = mongoose.model('User', UserSchema);
+
+module.exports = {
+	User: User
+}
 

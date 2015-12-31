@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Index View</title>
+	<link rel="stylesheet" href="bower/foundation/css/normalize.min.css">
+	<link rel="stylesheet" href="bower/foundation-sites/dist/foundation.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="bower/modernizr/modernizr.js"></script>
+</head>
+
+<body ng-app="Siftit" ng-controller="MainCtrl as main">
+
+	<!-- NAVIGATION -->
+	<div class="top-bar">
+		<div class="top-bar-left">
+			<ul class="dropdown menu" data-dropdown-menu>
+				<li class="menu-text">Site Title</li>
+				<li class="has-submenu">
+					<a href="#">One</a>
+					<ul class="submenu menu vertical" data-submenu>
+						<li><a href="#">One</a></li>
+						<li><a href="#">Two</a></li>
+						<li><a href="#">Three</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Two</a></li>
+				<li><a href="#">Three</a></li>
+			</ul>
+		</div>
+		<div class="top-bar-right">
+			<ul class="menu">
+				<li><input type="search" placeholder="Search"></li>
+				<li><button type="button" class="button">Search</button></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- MAIN CONTENT -->
+	<div class="container">
+
+		<div id="main-row" class="row">
+
+			<div class="medium-3 columns">
+				<table id="alerts-table" class="hover stack">
+					<thead>
+						<tr>
+							<th width="50">Product ID</th>
+							<th width="50">Product Name</th>
+							<th width="50">Metric #1</th>
+							<th width="50">Metric #2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>111111</td>
+							<td>Matt</td>
+							<td>Guy</td>
+							<td>Guy</td>
+						</tr>
+						<tr>
+							<td>444444</td>
+							<td>Du555de</td>
+							<td>Dude</td>
+							<td>Dude</td>
+						</tr>
+						<tr>
+							<td>Dude</td>
+							<td>Dude</td>
+							<td>Dude</td>
+							<td>Dude</td>
+						</tr>
+
+						<tr>
+							<td>Dude</td>
+							<td>Dude</td>
+							<td>Dude</td>
+							<td>Dude</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="medium-7 columns">
+				<div id="graphs-window" class="window">
+					<p>This is the Graphs Window</p>
+				</div>
+			</div>
+
+			<div class="medium-2 columns">
+				<div id="social-feed-window" class="window">
+					<p>Social Media Feed Window</p>
+				</div>
+			</div>
+
+		</div>
+		<!--==============	CLOSES MAIN-ROW	================-->
+
+	</div>
+	<!--==============	CLOSES CONTAINER	================-->
+
+
+	<script src="bower/jquery/dist/jquery.min.js"></script>
+	<script src="bower/foundation-sites/dist/foundation.min.js"></script>
+	<script src="bower/foundation-sites/js/foundation.util.mediaQuery.js"></script>
+	<script src="bower/angular/angular.min.js"></script>
+	<script src="bower/angular-route/angular-route.min.js"></script>
+	<script src="app/app.start.js"></script>
+	<script src="app/app.js"></script>
+</body>
+
+</html>
