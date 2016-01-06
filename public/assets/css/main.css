@@ -1,0 +1,12 @@
+/* line 1, ../sass/partials/_nav.scss */
+.nav {
+  color: red;
+  font: white;
+}
+
+/* line 3, ../sass/main.scss */
+#main-row {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

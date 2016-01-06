@@ -1,0 +1,80 @@
+{
+	"clothes": [
+		{
+			"dresses": {
+				"title": "Dresses",
+				"image": [
+					{
+						"src": "data/img/nArrivals/dress.jpg"
+					},
+					{
+						"src": "data/img/nArrivals/dress4.jpg"
+					},
+					{
+						"src": "data/img/nArrivals/dress2.jpg"
+					},
+					{
+						"src": "data/img/nArrivals/dress3.jpg"
+					}],
+				"price": "25$"
+			}
+	},
+		{
+			"jeans": {
+				"title": "Jeans",
+				"image": [
+					{
+						"src": "data/img/clothes/jeans/jeans1.jpg"
+					},
+					{
+						"src": "data/img/clothes/jeans/jeans2.jpg"
+					},
+					{
+						"src": "data/img/clothes/jeans/jeans3.jpg"
+					},
+					{
+						"src": "data/img/clothes/jeans/jeans4.jpg"
+					}],
+				"price": "25$"
+			}
+	},
+		{
+			"shirts": {
+				"title": "Shirts",
+				"image": [
+					{
+						"src": "data/img/clothes/shirts/shirt1.jpg"
+					},
+					{
+						"src": "data/img/clothes/shirts/shirt2.jpg"
+					},
+					{
+						"src": "data/img/clothes/shirts/shirt3.jpg"
+					},
+					{
+						"src": "data/img/clothes/shirts/shirt4.jpg"
+					}],
+				"price": "25$"
+			}
+	},
+		{
+			"long-sleeve": {
+				"title": "Long-Sleeve",
+				"image": [
+					{
+						"src": "data/img/clothes/long-sleeve/top1.jpg"
+					},
+					{
+						"src": "data/img/clothes/long-sleeve/top2.jpg"
+					},
+					{
+						"src": "data/img/clothes/long-sleeve/top3.jpg"
+					},
+					{
+						"src": "data/img/clothes/long-sleeve/top4.jpg"
+					}],
+				"price": "25$"
+			}
+	}
+]
+}
