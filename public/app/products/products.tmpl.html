@@ -1,0 +1,18 @@
+<h1>this is the products window</h1>
+<h2>{{productsController.currentProductName}}</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="4">ALERTS WINDOW</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="product in productsController.products track by $index">
+			<td>{{ }}</td>
+			<td>{{ product.name }}</td>
+			<td>{{ product.metric1 }}</td>
+			<td>{{ product.metric2 }}</td>
+		</tr>
+	</tbody>
+</table>

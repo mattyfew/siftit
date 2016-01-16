@@ -36,47 +36,24 @@
 			</ul>
 		</div>
 	</div>
-
+	
 	<!-- MAIN CONTENT -->
 	<div class="container">
 		<div class="row" id="main-row" >
-
-				<table ng-controller="ProductCtrl" id="alerts-table" class="medium-3 columns hover stack">
-					<thead>
-						<tr>
-							<th colspan="4">ALERTS WINDOW</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="product in productList.product">
-							<td>{{ $index + 1 }}</td>
-							<td>{{ product.name }}</td>
-							<td>{{ product.metric1 }}</td>
-							<td>{{ product.metric2 }}</td>
-						</tr>
-					</tbody>
-				</table>
-
 		
-		
-		
+			<div id="alerts-table" class="medium-3 columns" ui-view="alerts"></div>
+				
 			<div class="medium-7 columns">
 				<div id="graphs-window" class="window">
 					<p>This is the Graphs Window</p>
 				</div>
 			</div>
 
-		
-		
-		
 			<div class="medium-2 columns">
 				<div id="social-feed-window" class="window">
 					<p>Social Media Feed Window</p>
 				</div>
 			</div>
-
-
-
 
 		</div>
 		<!--==============	CLOSES MAIN-ROW	================-->
@@ -84,16 +61,24 @@
 	</div>
 	<!--==============	CLOSES CONTAINER	================-->
 
-
 	<script src="bower/jquery/dist/jquery.min.js"></script>
 	<script src="bower/foundation-sites/dist/foundation.min.js"></script>
 	<script src="bower/foundation-sites/js/foundation.util.mediaQuery.js"></script>
 	<script src="bower/angular/angular.min.js"></script>
-	<script src="bower/angular-route/angular-route.min.js"></script>
 	<script src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<script src="app/app.start.js"></script>
+	<script src="bower/angular-route/angular-route.min.js"></script>
+	
+	<!--	Angular App Code	-->
 	<script src="app/app.js"></script>
+	<script src="app/common/models/products-model.js"></script>
+	<script src="app/app.routes.js"></script>
+	<script src="app/products/products.main.js"></script>
+	<script src="app/products/products.controllers.js"></script>
+	<script src="app/products/products.services.js"></script>
+	
+	<!--	Other Script Files	-->
+	<script src="assets/js/main.js"></script>
 	<script src="//localhost:35729/livereload.js"></script>
+	
 </body>
-
 </html>
