@@ -15,6 +15,6 @@ angular.module('products.services', [])
 	vm.getProducts = function () {
 		console.log(URLS.FETCH)
 		return $http.get(URLS.FETCH).then(cacheProducts)
-	};
+	}; 
 	
 })

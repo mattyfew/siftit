@@ -11,7 +11,7 @@ angular.module('products.main', [
 			views: {
 				'alerts@': {
 					controller: 'productsController as productsController',
-					templateUrl: 'public/app/products/products.tmpl.html'
+					templateUrl: './public/app/products/products.tmpl.html'
 				}
 			}
 		})

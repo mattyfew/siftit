@@ -4,7 +4,25 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-
+		
+		jslint: {
+			client: {
+				src: ['**/*.js'],
+				files: ['**/*.js'],
+				directives: {
+					browser: true,
+					predef: ['jQuery']
+				}
+			}
+		},
+		
+		csslint: {
+			lax: {
+				options: {import: false},
+				src: ['**/*.css']
+			}
+		},
+ 
 		sass: {
 			dist: {
 				files: [{
@@ -46,12 +64,14 @@ module.exports = function (grunt) {
 			},
 			html: {
 				options: { livereload: true },
-				files: ['**.html']
+				files: ['**/*.html']
 			},
 			script: {
 				options: { livereload: true },
-				files: ['**.js']
-			}
+				files: ['**/*.js']
+			},
+			tasks: ['csslint'],
+			files: ['**/*.css']
 		}
 	});
 
@@ -59,14 +79,13 @@ module.exports = function (grunt) {
 	// Register modules 
 	// 
 
-	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks("grunt-contrib-sass");
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	require('load-grunt-tasks' )(grunt);
 
 	//
 	// Register tasks
 	//
 
+	grunt.registerTask('lint', ['csslint', 'jslint']);
 	grunt.registerTask('default', ['watch']);
 
 };
