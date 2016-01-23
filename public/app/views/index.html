@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Siftit">
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Siftit</title>
-	<link rel="stylesheet" href="bower/foundation/css/normalize.min.css">
+	<base href="/" />
+	<link rel="stylesheet" href="bower/foundation/css/normalize.min.css" />
 	<link rel="stylesheet" href="bower/foundation-sites/dist/foundation.min.css" />
-	<link rel="stylesheet" href="assets/css/main.min.css">
+	<link rel="stylesheet" href="assets/css/main.min.css" />
 	<script src="bower/modernizr/modernizr.js"></script>
 </head>
 
-<body ng-app="Siftit">
-
+<body>
 	<!-- NAVIGATION -->
 	<div class="top-bar">
 		<div class="top-bar-left">
@@ -36,13 +37,13 @@
 			</ul>
 		</div>
 	</div>
-	
+
 	<!-- MAIN CONTENT -->
 	<div class="container">
 		<div class="row" id="main-row" >
-		
-			<div id="alerts-table" class="medium-3 columns" ui-view="alerts"></div>
-				
+
+			<div id="alerts-table" class="medium-3 columns" href="/alerts" ng-view></div>
+
 			<div class="medium-7 columns">
 				<div id="graphs-window" class="window">
 					<p>This is the Graphs Window</p>
@@ -64,10 +65,11 @@
 	<script src="bower/jquery/dist/jquery.min.js"></script>
 	<script src="bower/foundation-sites/dist/foundation.min.js"></script>
 	<script src="bower/foundation-sites/js/foundation.util.mediaQuery.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 	<script src="bower/angular/angular.min.js"></script>
 	<script src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="bower/angular-route/angular-route.min.js"></script>
-	
+
 	<!--	Angular App Code	-->
 	<script src="app/app.js"></script>
 	<script src="app/common/models/products-model.js"></script>
@@ -75,10 +77,10 @@
 	<script src="app/products/products.main.js"></script>
 	<script src="app/products/products.controllers.js"></script>
 	<script src="app/products/products.services.js"></script>
-	
+
 	<!--	Other Script Files	-->
 	<script src="assets/js/main.js"></script>
-	<script src="//localhost:35729/livereload.js"></script>
-	
+	<!-- <script src="//localhost:35729/livereload.js"></script> -->
+
 </body>
 </html>

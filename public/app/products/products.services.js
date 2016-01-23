@@ -1,20 +1,17 @@
 angular.module('products.services', [])
 
-.service('productsService', function ($http) {
-	var vm = this,
-			URLS = {FETCH: '../public/assets/resources/small-products.json'}, 
-			products;
-
-	function extract(result) { return result.data; }	
-	
-	function cacheProducts(result) {
-		products = extract(result);
-		return products;
-	}	
-	
-	vm.getProducts = function () {
-		console.log(URLS.FETCH)
-		return $http.get(URLS.FETCH).then(cacheProducts)
-	}; 
-	
-})
+.factory('productsFactory', ['$http', function ($http) {
+	return {
+		// note: each function returns a promise that can be used in the controller
+		get: function() {
+			return $http.get('/api/products'); // get all products
+		},
+		create : function(productData) {
+			return $http.post('/api/products', productData);
+		},
+		// call to DELETE a product
+		delete : function(id) {
+			return $http.delete('/api/products/' + id);
+		}
+	}
+}]);
