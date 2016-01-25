@@ -1,45 +1,36 @@
 'use strict';
 
-angular.module('app.routes', ['ngRoute']).config(config);
+angular.module('app.routes', ['ui.router'])
 
-config.$inject = ['$routeProvider', '$locationProvider'];
+//config.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
 
-function config($routeProvider, $locationProvider){
-	$routeProvider
+.config(function($locationProvider, $stateProvider, $urlRouterProvider){
+	$locationProvider.html5Mode(true);
+	$urlRouterProvider.otherwise('/');
 
-		.when('/alerts', {
-			templateUrl: '/app/products/products.tmpl.html',
-			controller: 'productsController'
+	$stateProvider
+		.state('siftit', {
+			url: '/',
+			abstract: true,
+			template: '<ui-view/>'
+		})
+
+		.state('siftit.home', {
+			url: '',
+			views: {
+				'alerts@' : {
+					controller: 'alertsCtrl',
+					controllerAs: 'alerts',
+					templateUrl: 'app/products/products.tmpl.html'
+				},
+
+				'graphs@' : {
+
+				},
+
+				'socialFeed@' : {
+
+				}
+			}
 		});
-
-		$locationProvider.html5Mode(true);
-
-	// login page
-	// 	.when('/login', {
-	// 	templateUrl: 'app/views/pages/login.html',
-	// 	controller: 'mainController',
-	// 	controllerAs: 'login'
-	// })
-
-	// show all users
-	// 	.when('/users', {
-	// 	templateUrl: 'app/views/pages/users/all.html',
-	// 	controller: 'userController',
-	// 	controllerAs: 'user'
-	// })
-
-	// page to edit a user
-	// 	.when('/users/:user_id', {
-	// 	templateUrl: 'app/views/pages/users/single.html',
-	// 	controller: 'userEditController',
-	// 	controllerAs: 'user'
-	// })
-
-	// form to create a new user
-	// same view as edit page
-	// 	.when('/users/create', {
-	// 	templateUrl: 'app/views/pages/users/single.html',
-	// 	controller: 'userCreateController',
-	// 	controllerAs: 'user'
-	// });
-};
+});

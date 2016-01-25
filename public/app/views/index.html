@@ -17,17 +17,17 @@
 	<div class="top-bar">
 		<div class="top-bar-left">
 			<ul class="dropdown menu" data-dropdown-menu>
-				<li class="menu-text">Site Title</li>
+				<li class="menu-text">Sift-It</li>
 				<li class="has-submenu">
-					<a href="#">One</a>
+					<a href="#">Social</a>
 					<ul class="submenu menu vertical" data-submenu>
-						<li><a href="#">One</a></li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
+						<li><a href="#">Preferences</a></li>
+						<li><a href="#">Account Info</a></li>
+						<li><a href="#">Help</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Two</a></li>
-				<li><a href="#">Three</a></li>
+				<li><a href="#">Financial</a></li>
+				<li><a href="#">Images</a></li>
 			</ul>
 		</div>
 		<div class="top-bar-right">
@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="row" id="main-row" >
 
-			<div id="alerts-table" class="medium-3 columns" href="/alerts" ng-view></div>
+			<div id="alerts-table" class="medium-3 columns" ui-view="alerts"></div>
 
 			<div class="medium-7 columns">
 				<div id="graphs-window" class="window">
@@ -68,7 +68,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 	<script src="bower/angular/angular.min.js"></script>
 	<script src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<script src="bower/angular-route/angular-route.min.js"></script>
+	<!-- <script src="bower/angular-route/angular-route.min.js"></script> -->
 
 	<!--	Angular App Code	-->
 	<script src="app/app.js"></script>

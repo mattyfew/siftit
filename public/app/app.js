@@ -2,23 +2,15 @@
 // ============================
 'use strict';
 
-// Start Angular and inject all dependencies
 angular.module('Siftit', [
-	'ui.router',
 	'app.routes',
 	'products.main'
 ])
 
-.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-	// $stateProvider
-	// 	.state('siftit', {
-	// 		url: '',
-	// 		abstract: true
-	// });
-
-	$urlRouterProvider.otherwise('/');
-	$locationProvider.html5Mode(true);
-});
-
-
-// *check mean_machine for token integration.
+// .config(function($rootScope) {
+// 	var app = this;
+// 
+// 	// app.run(($rootScope) => {
+// 	//   $rootScope.$on("$stateChangeError", console.log.bind(console));
+// 	// });
+// })

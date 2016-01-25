@@ -1,14 +1,14 @@
-<table ng-controller="productsController">
+<table>
 	<thead>
 		<tr>
-			<th colspan="4">{{ message }}</th>
+			<th colspan="4">Your Alerts</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="product in productsController.products">
+		<tr ng-repeat="product in alerts.products">
 			<td>{{ product.name }}</td>
-			<td>{{ product.metric1 }}</td>
-			<td>{{ product.metric2 }}</td>
+			<td>{{ product.size }}</td>
+			<td>{{ product.color }}</td>
 		</tr>
 	</tbody>
 </table>

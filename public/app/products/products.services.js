@@ -9,7 +9,6 @@ angular.module('products.services', [])
 		create : function(productData) {
 			return $http.post('/api/products', productData);
 		},
-		// call to DELETE a product
 		delete : function(id) {
 			return $http.delete('/api/products/' + id);
 		}
